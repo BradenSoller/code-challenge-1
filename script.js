@@ -12,40 +12,21 @@ let myScrabbleTiles = [];
   { tile: 'X', score: 8 }
   { tile: 'D', score: 2 }
   { tile: 'A', score: 1 }
-*/
-scrambletile  = [
-  {
-  tile: 'N',
-  score: 1
-},
-{
-  title: 'K',
-  score: 5
-
-},
-{
-  tile: 'Z',
-  score: 10
-},
-{
-  tile: 'X',
-  score: 8
-},
-{
-  tile: 'D',
-  score: 2
-},
-{
-  tile: 'A',
-  score: 1
-},
+*/ myScrabbleTiles = [
+  { tile: 'N', score: 1 },
+  { tile: 'K', score: 5 },
+  { tile: 'Z', score: 10 },
+  { tile: 'X', score: 8 },
+  { tile: 'D', score: 2 },
+  { tile: 'A', score: 1 }
 ];
+
 console.log("My Scramble Tiles:");
-myScrabbleTiles.push(scrambletile);
+
 console.log(myScrabbleTiles);
 
 // 4. Remove the last tile from myScrabbleTiles and save it in a variable named removedTile.
-let removedTile = scrambletile.pop()
+let removedTile = myScrabbleTiles.pop()
 console.log("removed scramble tile :");
 console.log(removedTile);
 console.log(myScrabbleTiles);
@@ -54,12 +35,10 @@ console.log(myScrabbleTiles);
   { tile: 'F', score : 4 }
 */
 
-scrambletile.push({
-  title: 'F',
-  score: 4
-})
+
+ myScrabbleTiles.push({tile: 'F', score: 4})
+
 console.log('new tile;');
-console.log(scrambletile);
 console.log(myScrabbleTiles);
 // 6. Complete this function. It needs to be given an array of tile objects. The function will use a for-loop to add up and return the sum of all the scores for a given array of scrabble tiles.
 
@@ -72,21 +51,22 @@ function calculateScore(tiles) {
   return sum;
 }
 console.log('sum of tiles');
-console.log(calculateScore(scrambletile));
+console.log(calculateScore(myScrabbleTiles));
 
 
 // 7. Use the function above to get the total score for myScrabbleTiles and assign the value to a variable called "myScore".
 
-let myScore = calculateScore(scrambletile);
+let myScore = calculateScore(myScrabbleTiles);
 console.log(myScore);
 // 8. Check whether or not your score is higher than the highScore. If your score is higher, change highScore to the new high score.
 if (highScore < myScore){
+  highScore = myScore;
   console.log("new high score!");
 } else {
    console.log('try again!');
 }
 
-  highScore = myScore;
+  
 
 
 // DONE!
